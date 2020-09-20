@@ -1,8 +1,10 @@
 package com.chat;
 
 import javax.swing.*;
-
 import java.awt.*;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.*;
 
 public class MyWindow extends JFrame{
 
@@ -30,6 +32,9 @@ public class MyWindow extends JFrame{
         add(mainCanvas);
 
         setVisible(true);
+
+
     }
+
 
 }

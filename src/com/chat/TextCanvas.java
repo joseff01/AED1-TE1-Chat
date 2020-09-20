@@ -1,10 +1,12 @@
 package com.chat;
 
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.*;
 
 public class TextCanvas extends JPanel{
 
@@ -32,7 +34,19 @@ public class TextCanvas extends JPanel{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(TextBox.getText());
+
+            try {
+                Socket ClientSocket = new Socket("127.0.0.1", 10000);
+
+                DataOutputStream StreamOutput = new DataOutputStream(ClientSocket.getOutputStream());
+
+                StreamOutput.writeUTF(TextBox.getText());
+
+                StreamOutput.close();
+
+            } catch (IOException ioException) {
+                System.out.println(ioException.getMessage());;
+            }
 
         }
     }
