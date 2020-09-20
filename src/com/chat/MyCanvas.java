@@ -21,7 +21,7 @@ public class MyCanvas extends JPanel {
 
 
         // Chat Canvas, Right side
-        ChatCanvas cCanvas = new ChatCanvas();
+        cCanvas = new ChatCanvas();
 
         add(cCanvas);
 
@@ -29,5 +29,11 @@ public class MyCanvas extends JPanel {
 
     }
 
+    public int getListenSocket() {
 
+        return cCanvas.getListenSocket();
+
+    }
+
+    private ChatCanvas cCanvas;
 }

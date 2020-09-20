@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c569d88a-b3ee-4d8b-821a-8d657e629792" name="Default Changelist" comment="" />
+    <list default="true" id="c569d88a-b3ee-4d8b-821a-8d657e629792" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chat/ChatCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chat/ChatCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chat/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chat/MenuCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chat/MenuCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chat/MessagesCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chat/MessagesCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chat/MyCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chat/MyCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/chat/MyWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chat/MyWindow.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +31,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -44,19 +53,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -73,6 +69,7 @@
       <updated>1600545211622</updated>
       <workItem from="1600545216044" duration="2785000" />
       <workItem from="1600548024643" duration="17647000" />
+      <workItem from="1600634444428" duration="5480000" />
     </task>
     <servers />
   </component>
@@ -96,21 +93,29 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1701" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1600548004813" />
-    <state width="1235" height="394" key="GridCell.Tab.0.bottom" timestamp="1600567761824">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="869" height="128" key="GridCell.Tab.0.bottom" timestamp="1600640044948">
+      <screen x="0" y="23" width="1366" height="677" />
     </state>
     <state width="1235" height="394" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1600567761824" />
-    <state width="1235" height="394" key="GridCell.Tab.0.center" timestamp="1600567761824">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="869" height="128" key="GridCell.Tab.0.bottom/0.23.1366.677@0.23.1366.677" timestamp="1600640044948" />
+    <state width="962" height="128" key="GridCell.Tab.0.bottom/0.23.1366.680@0.23.1366.680" timestamp="1600637283683" />
+    <state width="869" height="128" key="GridCell.Tab.0.center" timestamp="1600640044947">
+      <screen x="0" y="23" width="1366" height="677" />
     </state>
     <state width="1235" height="394" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1600567761824" />
-    <state width="1235" height="394" key="GridCell.Tab.0.left" timestamp="1600567761824">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="869" height="128" key="GridCell.Tab.0.center/0.23.1366.677@0.23.1366.677" timestamp="1600640044947" />
+    <state width="962" height="128" key="GridCell.Tab.0.center/0.23.1366.680@0.23.1366.680" timestamp="1600637283681" />
+    <state width="869" height="128" key="GridCell.Tab.0.left" timestamp="1600640044946">
+      <screen x="0" y="23" width="1366" height="677" />
     </state>
     <state width="1235" height="394" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1600567761824" />
-    <state width="1235" height="394" key="GridCell.Tab.0.right" timestamp="1600567761824">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="869" height="128" key="GridCell.Tab.0.left/0.23.1366.677@0.23.1366.677" timestamp="1600640044946" />
+    <state width="962" height="128" key="GridCell.Tab.0.left/0.23.1366.680@0.23.1366.680" timestamp="1600637283680" />
+    <state width="869" height="128" key="GridCell.Tab.0.right" timestamp="1600640044948">
+      <screen x="0" y="23" width="1366" height="677" />
     </state>
     <state width="1235" height="394" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1600567761824" />
+    <state width="869" height="128" key="GridCell.Tab.0.right/0.23.1366.677@0.23.1366.677" timestamp="1600640044948" />
+    <state width="962" height="128" key="GridCell.Tab.0.right/0.23.1366.680@0.23.1366.680" timestamp="1600637283682" />
   </component>
 </project>

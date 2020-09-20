@@ -10,14 +10,8 @@ public class MyWindow extends JFrame{
 
     public MyWindow(){
 
-        Toolkit tkWindow = Toolkit.getDefaultToolkit();
-        Dimension dimWindow = tkWindow.getScreenSize();
-
-        int hWindow = dimWindow.height;
-        int wWindow = dimWindow.width;
-
-        this.setSize(wWindow/3,hWindow/2);
-        this.setLocation(wWindow/3,hWindow/4);
+        this.setSize(840,685);
+        this.setLocation(50,50);
         this.setTitle("Chat V0.1");
 
         ImageIcon chatIcon = new ImageIcon("Images\\chatIcon.jpg");

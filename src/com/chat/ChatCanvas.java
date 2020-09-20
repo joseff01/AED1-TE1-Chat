@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class ChatCanvas extends JPanel {
 
-    public ChatCanvas(){
+    public ChatCanvas() {
 
         this.setBackground(Color.BLUE);
 
@@ -16,17 +16,26 @@ public class ChatCanvas extends JPanel {
 
         TextCanvas tCanvas = new TextCanvas();
 
-        tCanvas.setBounds(0,550,420,135);
+        tCanvas.setBounds(0, 550, 420, 135);
 
         // Messages Canvas
 
-        MessagesCanvas msgCanvas = new MessagesCanvas();
+        msgCanvas = new MessagesCanvas();
 
-        msgCanvas.setBounds(0,0,420,550);
+        msgCanvas.setBounds(0, 0, 420, 550);
+
 
         add(tCanvas);
         add(msgCanvas);
 
 
     }
+
+    public int getListenSocket() {
+
+        return msgCanvas.getListenSocket();
+
+    }
+
+    private MessagesCanvas msgCanvas;
 }

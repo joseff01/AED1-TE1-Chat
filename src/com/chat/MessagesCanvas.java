@@ -8,6 +8,8 @@ import java.awt.*;
 
 public class MessagesCanvas extends JPanel implements Runnable{
 
+    int ListenSocketNum = 10000;
+
     public MessagesCanvas(){
 
         this.setBackground(Color.ORANGE);
@@ -26,12 +28,19 @@ public class MessagesCanvas extends JPanel implements Runnable{
 
     }
 
+    public int getListenSocket(){
+
+        return ListenSocketNum;
+
+    }
+
+
     @Override
     public void run() {
 
         try {
 
-            ServerSocket ListenSocket = new ServerSocket(10000);
+            ServerSocket ListenSocket = new ServerSocket(ListenSocketNum);
 
             while(true) {
 
@@ -49,6 +58,7 @@ public class MessagesCanvas extends JPanel implements Runnable{
         } catch (IOException e) {
 
             e.printStackTrace();
+
         }
 
 
