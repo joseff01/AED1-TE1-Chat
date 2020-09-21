@@ -10,7 +10,7 @@ public class MyWindow extends JFrame{
 
     public MyWindow(){
 
-        this.setSize(840,685);
+        this.setSize(850,720);
         this.setLocation(50,50);
         this.setTitle("Chat V0.1");
 

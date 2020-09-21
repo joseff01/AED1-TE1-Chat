@@ -6,9 +6,10 @@ import java.awt.*;
 
 public class MenuCanvas extends JPanel {
 
+    int ListenSocket;
+
     public MenuCanvas(){
 
-        this.setBackground(Color.RED);
 
         this.setLayout(new GridBagLayout());
 
@@ -18,8 +19,11 @@ public class MenuCanvas extends JPanel {
 
         JMenu IpInfo = new JMenu("Info");
 
+        JMenuItem EmptySpace = new JMenu();
+
         JMenuItem IpItem = new JMenuItem("IP: 127.0.0.1");
-        JMenuItem SocketItem = new JMenuItem("Socket:");
+
+        SocketItem = new JMenuItem("Socket: ");
 
         IpInfo.add(IpItem);
         IpInfo.add(SocketItem);
@@ -36,6 +40,15 @@ public class MenuCanvas extends JPanel {
 
 
 
+
     }
 
+    public void setListenSocket(int listenSocket) {
+
+        ListenSocket = listenSocket;
+        SocketItem.setText("Socket: " + ListenSocket);
+
+    }
+
+    private JMenuItem SocketItem;
 }

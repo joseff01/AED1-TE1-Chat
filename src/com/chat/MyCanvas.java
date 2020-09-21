@@ -25,6 +25,9 @@ public class MyCanvas extends JPanel {
 
         add(cCanvas);
 
+        // Sending the Socket number to the menuCanvas, so it can be displayed
+        menuCanvas.setListenSocket(cCanvas.getListenSocket());
+
 
 
     }

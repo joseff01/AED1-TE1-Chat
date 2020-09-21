@@ -1,8 +1,10 @@
 package com.chat;
 
 import javax.swing.*;
+import javax.swing.border.EtchedBorder;
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.*;
 import java.awt.*;
 
@@ -10,19 +12,15 @@ public class MessagesCanvas extends JPanel implements Runnable{
 
     int ListenSocketNum = 10000;
 
+    byte RowLevel = 0;
+
     public MessagesCanvas(){
 
-        this.setBackground(Color.ORANGE);
-
-        this.setLayout(new GridLayout(8,2,5,5));
-
-        MessageBox = new JLabel();
-
-        this.setPreferredSize(new Dimension(420,135));
-
-        add(MessageBox);
-
         Thread ParallelThread = new Thread(this);
+
+        this.setLayout(new GridLayout());
+
+        this.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
 
         ParallelThread.start();
 
@@ -42,27 +40,64 @@ public class MessagesCanvas extends JPanel implements Runnable{
 
             ServerSocket ListenSocket = new ServerSocket(ListenSocketNum);
 
+            String SenderIP, Message, SenderSocket;
+
+            DataPack dataPackReceived;
+
             while(true) {
 
                 Socket EntrySocket = ListenSocket.accept();
 
-                DataInputStream StreamInput = new DataInputStream(EntrySocket.getInputStream());
+                ObjectInputStream StreamInput = new ObjectInputStream(EntrySocket.getInputStream());
 
-                String EntryMessage = StreamInput.readUTF();
+                dataPackReceived = (DataPack) StreamInput.readObject();
 
-                MessageBox.setText("\n" + EntryMessage);
+                SenderIP = dataPackReceived.getSenderIP();
+                Message = dataPackReceived.getMessage();
+                SenderSocket = dataPackReceived.getSenderSocket();
+
+
+                MessageBox = new JTextArea(3,10);
+
+                MessageBox.setEditable(false);
+
+                MessageBox.setLineWrap(true);
+
+                MessageBox.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+
+                MessageBox.setText("Ip: " + SenderIP +  "/ Socket: " + SenderSocket + "\n" + Message);
+
+                JScrollPane jScrollPane = new JScrollPane(MessageBox);
+
+                this.add(jScrollPane);
+
+                this.validate();
+                this.repaint();
 
                 EntrySocket.close();
+
+
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
 
-            e.printStackTrace();
+            if (ListenSocketNum < 20000){
+
+                ListenSocketNum++;
+                run();
+
+            }
+            else{
+
+                e.printStackTrace();
+
+            }
 
         }
 
 
     }
 
-    private JLabel MessageBox;
+    private JTextArea MessageBox;
+
 }

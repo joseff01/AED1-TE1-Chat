@@ -8,25 +8,35 @@ public class ChatCanvas extends JPanel {
 
     public ChatCanvas() {
 
+        this.setLayout(new GridBagLayout());
+
         this.setBackground(Color.BLUE);
 
-        this.setLayout(null);
-
-        // TextBox Canvas
-
-        TextCanvas tCanvas = new TextCanvas();
-
-        tCanvas.setBounds(0, 550, 420, 135);
+        GridBagConstraints gbc = new GridBagConstraints();
 
         // Messages Canvas
 
         msgCanvas = new MessagesCanvas();
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.NORTH;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 10;
+        gbc.weightx = 1;
 
-        msgCanvas.setBounds(0, 0, 420, 550);
+        this.add(msgCanvas,gbc);
+
+        // TextBox Canvas
+
+        TextCanvas tCanvas = new TextCanvas();
+        gbc.gridy = 9;
+        gbc.anchor = GridBagConstraints.SOUTH;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1;
+        gbc.weightx = 1;
+
+        this.add(tCanvas,gbc);
 
 
-        add(tCanvas);
-        add(msgCanvas);
 
 
     }

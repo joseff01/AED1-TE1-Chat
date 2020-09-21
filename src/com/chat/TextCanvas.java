@@ -20,33 +20,26 @@ public class TextCanvas extends JPanel{
         JScrollPane ScrollBox = new JScrollPane(TextBox);
 
         JButton SendButton = new JButton("Send");
-        SendText event = new SendText();
+        CreatePopup PopupEvent = new CreatePopup();
 
-        SendButton.addActionListener(event);
+        SendButton.addActionListener(PopupEvent);
 
-        add(ScrollBox, BorderLayout.CENTER);
-        add(SendButton, BorderLayout.EAST);
+        this.add(ScrollBox, BorderLayout.CENTER);
+        this.add(SendButton, BorderLayout.EAST);
 
 
     }
 
-    private class SendText implements ActionListener{
+    private class CreatePopup implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            try {
-                Socket ClientSocket = new Socket("127.0.0.1", 10000);
+             PopupWindow popupWindow = new PopupWindow();
 
-                DataOutputStream StreamOutput = new DataOutputStream(ClientSocket.getOutputStream());
+             popupWindow.setText(TextBox.getText());
 
-                StreamOutput.writeUTF(TextBox.getText());
 
-                StreamOutput.close();
-
-            } catch (IOException ioException) {
-                System.out.println(ioException.getMessage());;
-            }
 
         }
     }
