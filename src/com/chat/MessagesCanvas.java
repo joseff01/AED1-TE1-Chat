@@ -2,7 +2,6 @@ package com.chat;
 
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.*;

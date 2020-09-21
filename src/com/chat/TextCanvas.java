@@ -4,11 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.*;
+
 
 public class TextCanvas extends JPanel{
+
+    String MySocket;
 
     public TextCanvas(){
 
@@ -35,15 +35,36 @@ public class TextCanvas extends JPanel{
         @Override
         public void actionPerformed(ActionEvent e) {
 
-             PopupWindow popupWindow = new PopupWindow();
+            popupWindow = new PopupWindow();
 
-             popupWindow.setText(TextBox.getText());
+            popupWindow.setText(TextBox.getText());
 
+            popupWindow.setMySocket(MySocket);
 
 
         }
     }
 
+    public void setMySocket(String mySocket) {
+
+        MySocket = mySocket;
+
+    }
+
     private JTextArea TextBox;
 
+
+    public void setFlagStateFalse() {
+
+        popupWindow.setFlagStateFalse();
+
+    }
+
+    public DataPack getDataPack() {
+
+        return popupWindow.getDataPack();
+
+    }
+
+    public PopupWindow popupWindow;
 }

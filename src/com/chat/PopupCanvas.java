@@ -4,12 +4,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.*;
 
-public class PopupCanvas extends JPanel{
+public class PopupCanvas extends JPanel {
+
+    DefaultListModel ConvList;
+
+    public boolean getConvListFlag = false;
+
+    String MySocket;
 
     String Text;
 
@@ -43,21 +48,32 @@ public class PopupCanvas extends JPanel{
 
     }
 
+    public void setFlagStateFalse() {
+
+        getConvListFlag = false;
+
+    }
+
     private class SendTextEvent implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
 
             try {
+                
                 Socket ClientSocket = new Socket(IPText.getText(), Integer.parseInt(SocketText.getText()));
 
-                DataPack dataPack = new DataPack();
+                dataPack = new DataPack();
 
                 dataPack.setMessage(Text);
 
                 dataPack.setSenderIP(IPText.getText());
 
-                dataPack.setSenderSocket(SocketText.getText());
+                dataPack.setSenderSocket(MySocket);
+
+                dataPack.setReceiverSocket(SocketText.getText());
+
+                getConvListFlag = true;
 
                 ObjectOutputStream StreamOutput = new ObjectOutputStream(ClientSocket.getOutputStream());
 
@@ -89,7 +105,21 @@ public class PopupCanvas extends JPanel{
 
     }
 
+    public void setMySocket(String mySocket) {
+
+        MySocket = mySocket;
+
+    }
+
+    public DataPack getDataPack() {
+
+        return dataPack;
+
+    }
+
     private JTextArea IPText;
     private JTextArea SocketText;
+    private DataPack dataPack;
+
 
 }

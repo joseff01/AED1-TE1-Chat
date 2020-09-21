@@ -3,14 +3,13 @@ package com.chat;
 import javax.swing.*;
 
 import java.awt.*;
+import java.io.DataOutput;
 
 public class ChatCanvas extends JPanel {
 
     public ChatCanvas() {
 
         this.setLayout(new GridBagLayout());
-
-        this.setBackground(Color.BLUE);
 
         GridBagConstraints gbc = new GridBagConstraints();
 
@@ -27,7 +26,7 @@ public class ChatCanvas extends JPanel {
 
         // TextBox Canvas
 
-        TextCanvas tCanvas = new TextCanvas();
+        tCanvas = new TextCanvas();
         gbc.gridy = 9;
         gbc.anchor = GridBagConstraints.SOUTH;
         gbc.fill = GridBagConstraints.BOTH;
@@ -47,5 +46,25 @@ public class ChatCanvas extends JPanel {
 
     }
 
+    public void setMySocket(String mySocket) {
+
+        tCanvas.setMySocket(mySocket);
+
+    }
+
+    public TextCanvas tCanvas;
+
     private MessagesCanvas msgCanvas;
+
+
+    public void setFlagStateFalse() {
+
+        tCanvas.setFlagStateFalse();
+    }
+
+    public DataPack getDataPack() {
+
+        return tCanvas.getDataPack();
+
+    }
 }

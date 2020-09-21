@@ -4,7 +4,18 @@ import java.io.Serializable;
 
 public class DataPack implements Serializable {
 
-    private String SenderIP, Message, SenderSocket;
+    private String SenderIP;
+    private String Message;
+    private String SenderSocket;
+    private String ReceiverSocket;
+
+    public String getReceiverSocket() {
+        return ReceiverSocket;
+    }
+
+    public void setReceiverSocket(String receiverSocket) {
+        ReceiverSocket = receiverSocket;
+    }
 
     public String getSenderIP() {
         return SenderIP;
@@ -29,6 +40,7 @@ public class DataPack implements Serializable {
     public void setSenderSocket(String senderSocket) {
         SenderSocket = senderSocket;
     }
+
 
 
 }

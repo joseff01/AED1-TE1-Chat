@@ -1,10 +1,6 @@
 package com.chat;
 
 import javax.swing.*;
-import java.awt.*;
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.net.*;
 
 public class PopupWindow extends JFrame{
 
@@ -12,7 +8,7 @@ public class PopupWindow extends JFrame{
 
     public PopupWindow(){
 
-        this.setSize(150,150);
+        this.setSize(235,130);
         this.setLocation(50,50);
         this.setTitle("Send Message");
 
@@ -39,7 +35,29 @@ public class PopupWindow extends JFrame{
 
     }
 
-    private PopupCanvas popupCanvas;
+    public void setMySocket(String mySocket) {
 
+        popupCanvas.setMySocket(mySocket);
 
+    }
+
+    public PopupCanvas popupCanvas;
+
+    public boolean getFlagState(){
+
+        return popupCanvas.getConvListFlag;
+
+    }
+
+    public void setFlagStateFalse() {
+
+        popupCanvas.setFlagStateFalse();
+
+    }
+
+    public DataPack getDataPack() {
+
+        return popupCanvas.getDataPack();
+
+    }
 }

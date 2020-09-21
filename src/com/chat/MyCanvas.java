@@ -1,12 +1,13 @@
 package com.chat;
 
 import javax.swing.*;
-
 import java.awt.*;
 
-public class MyCanvas extends JPanel {
+public class MyCanvas extends JPanel implements Runnable{
 
     public MyCanvas(){
+
+        Thread ParallelThread = new Thread(this);
 
         this.setBackground(Color.BLACK);
 
@@ -15,7 +16,7 @@ public class MyCanvas extends JPanel {
 
         // Messages Canvas, Left Side
 
-        MenuCanvas menuCanvas = new MenuCanvas();
+        menuCanvas = new MenuCanvas();
 
         add(menuCanvas);
 
@@ -28,15 +29,36 @@ public class MyCanvas extends JPanel {
         // Sending the Socket number to the menuCanvas, so it can be displayed
         menuCanvas.setListenSocket(cCanvas.getListenSocket());
 
+        // Sending the Socket number to the chat so it can be sent
+        cCanvas.setMySocket(String.valueOf(cCanvas.getListenSocket()));
+
+        ParallelThread.start();
 
 
     }
 
-    public int getListenSocket() {
+    @Override
+    public void run() {
+        while (true) {
+            try{
+                if ((cCanvas.tCanvas.popupWindow.popupCanvas.getConvListFlag) == true) {
+                    System.out.println("biatch, oh yeah");
+                    DataPack dataPack = cCanvas.getDataPack();
+                    cCanvas.setFlagStateFalse();
 
-        return cCanvas.getListenSocket();
+                    menuCanvas.checkPrevConv(dataPack);
+                }
+
+            } catch (Exception e) {
+                continue;
+            }
+        }
 
     }
+    private MenuCanvas menuCanvas;
 
     private ChatCanvas cCanvas;
+
+
 }
+

@@ -8,8 +8,9 @@ public class MenuCanvas extends JPanel {
 
     int ListenSocket;
 
-    public MenuCanvas(){
+    DefaultListModel listModel;
 
+    public MenuCanvas(){
 
         this.setLayout(new GridBagLayout());
 
@@ -17,7 +18,7 @@ public class MenuCanvas extends JPanel {
 
         JMenuBar InfoBar = new JMenuBar();
 
-        JMenu IpInfo = new JMenu("Info");
+        JMenu IpInfo = new JMenu("MyInfo");
 
         JMenuItem EmptySpace = new JMenu();
 
@@ -25,16 +26,41 @@ public class MenuCanvas extends JPanel {
 
         SocketItem = new JMenuItem("Socket: ");
 
+        //InfoBar
+
         IpInfo.add(IpItem);
         IpInfo.add(SocketItem);
 
         InfoBar.add(IpInfo);
 
         gbCons.anchor = GridBagConstraints.NORTHWEST;
+        gbCons.gridy = 0;
+        gbCons.gridx = 0;
         gbCons.weightx = 1;
         gbCons.weighty = 1;
 
         this.add(InfoBar,gbCons);
+
+        //ConvList
+
+        listModel = new DefaultListModel();
+
+        JList<String> ConvList = new JList<String>(listModel);
+
+        JScrollPane listScrollPane = new JScrollPane(ConvList);
+
+        gbCons.anchor = GridBagConstraints.SOUTH;
+        gbCons.gridy = 1;
+        gbCons.gridx = 0;
+        gbCons.weightx = 1;
+        gbCons.weighty = 400;
+        gbCons.fill = GridBagConstraints.BOTH;
+
+        this.add(listScrollPane,gbCons);
+
+
+
+
 
 
 
@@ -50,5 +76,37 @@ public class MenuCanvas extends JPanel {
 
     }
 
+    public void setConversation(MyConversation conversation){
+
+        listModel.addElement("Ip: " + conversation.ConvIp + "/ Socket: " + conversation.ConvSocket );
+
+    }
+
+    public DefaultListModel getConversationList(){
+
+        return listModel;
+
+    }
+
     private JMenuItem SocketItem;
+
+    public void checkPrevConv(DataPack dataPack) {
+
+        if (listModel.contains("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket())){
+
+            System.out.println("hello biatches");
+        }
+
+        else{
+            System.out.println("no biatches :(");
+        }
+        /*
+        for (int i = 0; i < listModel.size() ; i++ )
+
+            ( "Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket() )
+        }
+
+         */
+
+    }
 }

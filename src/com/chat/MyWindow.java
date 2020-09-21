@@ -19,7 +19,9 @@ public class MyWindow extends JFrame{
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        this.setResizable(false);
+        this.setResizable(true);
+
+        this.setMinimumSize(new Dimension(500,500));
 
         MyCanvas mainCanvas = new MyCanvas();
 
