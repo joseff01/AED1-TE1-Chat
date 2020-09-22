@@ -7,12 +7,13 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.*;
+import java.util.Observable;
 
-public class PopupCanvas extends JPanel {
+public class PopupCanvas extends JPanel{
 
     DefaultListModel ConvList;
 
-    public boolean getConvListFlag = false;
+    FlagMessage flagMessage = new FlagMessage();
 
     String MySocket;
 
@@ -50,9 +51,10 @@ public class PopupCanvas extends JPanel {
 
     public void setFlagStateFalse() {
 
-        getConvListFlag = false;
+        flagMessage.setGetConvListFlag(false);
 
     }
+
 
     private class SendTextEvent implements ActionListener {
 
@@ -73,9 +75,9 @@ public class PopupCanvas extends JPanel {
 
                 dataPack.setReceiverSocket(SocketText.getText());
 
-                getConvListFlag = true;
-
                 ObjectOutputStream StreamOutput = new ObjectOutputStream(ClientSocket.getOutputStream());
+
+                flagMessage.setGetConvListFlag(true);
 
                 StreamOutput.writeObject(dataPack);
 

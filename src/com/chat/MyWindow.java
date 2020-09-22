@@ -23,10 +23,6 @@ public class MyWindow extends JFrame{
 
         this.setMinimumSize(new Dimension(500,500));
 
-        MyCanvas mainCanvas = new MyCanvas();
-
-        add(mainCanvas);
-
         setVisible(true);
 
 

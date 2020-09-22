@@ -8,6 +8,23 @@ public class Main {
 
         MyWindow mainWindow = new MyWindow();
 
+        MyCanvas mainCanvas = new MyCanvas();
+
+        mainWindow.add(mainCanvas);
+
+        // Messages Canvas, Left Side
+
+        MenuCanvas menuCanvas = new MenuCanvas();
+
+        mainCanvas.add(menuCanvas);
+
+        // Chat Canvas, Right side
+        ChatCanvas cCanvas = new ChatCanvas();
+
+        mainCanvas.add(cCanvas);
+
+
+
 
 
 
