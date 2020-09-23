@@ -59,14 +59,6 @@ public class MenuCanvas extends JPanel {
         this.add(listScrollPane,gbCons);
 
 
-
-
-
-
-
-
-
-
     }
 
     public void setListenSocket(int listenSocket) {

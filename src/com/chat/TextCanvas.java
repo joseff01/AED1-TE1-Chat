@@ -16,33 +16,9 @@ public class TextCanvas extends JPanel{
 
         TextBox = new JTextArea();
 
-        TextBox.setLineWrap(true);
         JScrollPane ScrollBox = new JScrollPane(TextBox);
 
-        JButton SendButton = new JButton("Send");
-        CreatePopup PopupEvent = new CreatePopup();
-
-        SendButton.addActionListener(PopupEvent);
-
         this.add(ScrollBox, BorderLayout.CENTER);
-        this.add(SendButton, BorderLayout.EAST);
-
-
-    }
-
-    private class CreatePopup implements ActionListener{
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-            popupWindow = new PopupWindow();
-
-            popupWindow.setText(TextBox.getText());
-
-            popupWindow.setMySocket(MySocket);
-
-
-        }
     }
 
     public void setMySocket(String mySocket) {
@@ -50,9 +26,6 @@ public class TextCanvas extends JPanel{
         MySocket = mySocket;
 
     }
-
-    private JTextArea TextBox;
-
 
     public void setFlagStateFalse() {
 
@@ -66,5 +39,40 @@ public class TextCanvas extends JPanel{
 
     }
 
-    public PopupWindow popupWindow;
+    private JTextArea TextBox;
+
+    public JTextArea getTextBox() {
+        return TextBox;
+    }
+
+    public void setTextBox(JTextArea textBox) {
+        TextBox = textBox;
+
+    }
+
+
+    private PopupWindow popupWindow;
+
+    public PopupWindow getPopupWindow() {
+        return popupWindow;
+    }
+
+    public void setPopupWindow(PopupWindow popupWindow) {
+        this.popupWindow = popupWindow;
+    }
+
+    private JButton SendButton;
+
+    public JButton getSendButton() {
+        return SendButton;
+    }
+
+    public void setSendButton(JButton sendButton) {
+        SendButton = sendButton;
+
+        this.add(SendButton, BorderLayout.EAST);
+
+    }
+
+
 }

@@ -7,36 +7,11 @@ import java.io.DataOutput;
 
 public class ChatCanvas extends JPanel {
 
+    GridBagConstraints gbc = new GridBagConstraints();
+
     public ChatCanvas() {
 
         this.setLayout(new GridBagLayout());
-
-        GridBagConstraints gbc = new GridBagConstraints();
-
-        // Messages Canvas
-
-        msgCanvas = new MessagesCanvas();
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.NORTH;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.weighty = 10;
-        gbc.weightx = 1;
-
-        this.add(msgCanvas,gbc);
-
-        // TextBox Canvas
-
-        tCanvas = new TextCanvas();
-        gbc.gridy = 9;
-        gbc.anchor = GridBagConstraints.SOUTH;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.weighty = 1;
-        gbc.weightx = 1;
-
-        this.add(tCanvas,gbc);
-
-
-
 
     }
 
@@ -52,10 +27,6 @@ public class ChatCanvas extends JPanel {
 
     }
 
-    public TextCanvas tCanvas;
-
-    private MessagesCanvas msgCanvas;
-
 
     public void setFlagStateFalse() {
 
@@ -67,4 +38,41 @@ public class ChatCanvas extends JPanel {
         return tCanvas.getDataPack();
 
     }
+
+    private TextCanvas tCanvas;
+
+    public TextCanvas gettCanvas() {
+        return tCanvas;
+    }
+
+    public void settCanvas(TextCanvas tCanvas) {
+        this.tCanvas = tCanvas;
+
+        this.gbc.gridy = 9;
+        this.gbc.anchor = GridBagConstraints.SOUTH;
+        this.gbc.fill = GridBagConstraints.BOTH;
+        this.gbc.weighty = 1;
+        this.gbc.weightx = 1;
+
+        this.add(tCanvas,this.gbc);
+    }
+
+    private MessagesCanvas msgCanvas;
+
+    public MessagesCanvas getMsgCanvas() {
+        return msgCanvas;
+    }
+
+    public void setMsgCanvas(MessagesCanvas msgCanvas) {
+        this.msgCanvas = msgCanvas;
+
+        this.gbc.gridy = 0;
+        this.gbc.anchor = GridBagConstraints.NORTH;
+        this.gbc.fill = GridBagConstraints.BOTH;
+        this.gbc.weighty = 10;
+        this.gbc.weightx = 1;
+
+        this.add(msgCanvas,this.gbc);
+    }
+
 }
