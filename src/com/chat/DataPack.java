@@ -17,8 +17,7 @@ public class DataPack implements Serializable {
         ReceiverSocket = receiverSocket;
     }
 
-    public String getSenderIP() {
-        return SenderIP;
+    public String getSenderIP() { return SenderIP;
     }
 
     public void setSenderIP(String senderIP) {

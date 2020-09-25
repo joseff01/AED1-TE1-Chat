@@ -8,7 +8,7 @@ public class PopupWindow extends JFrame{
 
     public PopupWindow(){
 
-        this.setSize(235,130);
+        this.setSize(235,150);
         this.setLocation(50,50);
         this.setTitle("Send Message");
 
@@ -19,10 +19,6 @@ public class PopupWindow extends JFrame{
 
         this.setResizable(false);
 
-        popupCanvas = new PopupCanvas();
-
-        add(popupCanvas);
-
         setVisible(true);
 
 
@@ -31,13 +27,24 @@ public class PopupWindow extends JFrame{
     public void setText(String ChatText){
 
         Text = ChatText;
-        popupCanvas.setText(Text);
+        popupCanvas.setTextMessage(Text);
 
     }
 
     public void setMySocket(String mySocket) {
 
         popupCanvas.setMySocket(mySocket);
+
+    }
+
+    public PopupCanvas getPopupCanvas() {
+        return popupCanvas;
+    }
+
+    public void setPopupCanvas(PopupCanvas popupCanvas) {
+
+        this.popupCanvas = popupCanvas;
+        this.add(this.popupCanvas);
 
     }
 
@@ -49,11 +56,7 @@ public class PopupWindow extends JFrame{
 
     }
 */
-    public void setFlagStateFalse() {
 
-        popupCanvas.setFlagStateFalse();
-
-    }
 
     public DataPack getDataPack() {
 

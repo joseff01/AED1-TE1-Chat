@@ -13,12 +13,6 @@ public class PopupCanvas extends JPanel{
 
     DefaultListModel ConvList;
 
-    FlagMessage flagMessage = new FlagMessage();
-
-    String MySocket;
-
-    String Text;
-
     public PopupCanvas(){
 
         this.setLayout(null);
@@ -39,78 +33,6 @@ public class PopupCanvas extends JPanel{
         SocketText.setBounds(55,27,175,20);
         this.add(SocketText);
 
-        JButton PopupSendButton = new JButton("Send");
-        PopupSendButton.setBounds(80,60,90,40);
-        this.add(PopupSendButton);
-
-        SendTextEvent sendTextEvent = new SendTextEvent();
-
-        PopupSendButton.addActionListener(sendTextEvent);
-
-    }
-
-    public void setFlagStateFalse() {
-
-        flagMessage.setGetConvListFlag(false);
-
-    }
-
-
-    private class SendTextEvent implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-            try {
-                
-                Socket ClientSocket = new Socket(IPText.getText(), Integer.parseInt(SocketText.getText()));
-
-                dataPack = new DataPack();
-
-                dataPack.setMessage(Text);
-
-                dataPack.setSenderIP(IPText.getText());
-
-                dataPack.setSenderSocket(MySocket);
-
-                dataPack.setReceiverSocket(SocketText.getText());
-
-                ObjectOutputStream StreamOutput = new ObjectOutputStream(ClientSocket.getOutputStream());
-
-                flagMessage.setGetConvListFlag(true);
-
-                StreamOutput.writeObject(dataPack);
-
-                StreamOutput.close();
-
-                JComponent component = (JComponent) e.getSource();
-                Window window = SwingUtilities.getWindowAncestor(component);
-                window.dispose();
-
-
-            } catch (IOException ioException) {
-
-                System.out.println(ioException.getMessage());
-
-                JComponent component = (JComponent) e.getSource();
-                Window window = SwingUtilities.getWindowAncestor(component);
-                window.dispose();
-
-            }
-
-        }
-    }
-
-    public void setText(String ChatText){
-
-        Text = ChatText;
-
-    }
-
-    public void setMySocket(String mySocket) {
-
-        MySocket = mySocket;
-
     }
 
     public DataPack getDataPack() {
@@ -119,9 +41,65 @@ public class PopupCanvas extends JPanel{
 
     }
 
+    public JTextArea getIPText() {
+        return IPText;
+    }
+
+    public void setIPText(JTextArea IPText) {
+        this.IPText = IPText;
+    }
+
     private JTextArea IPText;
+
+    public JTextArea getSocketText() {
+        return SocketText;
+    }
+
+    public void setSocketText(JTextArea socketText) {
+        SocketText = socketText;
+    }
+
     private JTextArea SocketText;
+
+    public void setDataPack(DataPack dataPack) {
+        this.dataPack = dataPack;
+    }
+
     private DataPack dataPack;
+
+    public JButton getPopupSendButton() {
+        return PopupSendButton;
+    }
+
+    public void setPopupSendButton(JButton popupSendButton) {
+        PopupSendButton = popupSendButton;
+    }
+
+    private JButton PopupSendButton;
+
+    public void setMySocket(String mySocket) {
+
+        MySocket = mySocket;
+
+    }
+
+    public String getMySocket() {
+        return MySocket;
+    }
+
+    private String MySocket;
+
+    public void setTextMessage(String ChatText){
+
+        Text = ChatText;
+
+    }
+
+    public String getTextMessage() {
+        return Text;
+    }
+
+    private String Text;
 
 
 }

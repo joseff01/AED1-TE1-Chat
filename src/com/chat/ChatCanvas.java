@@ -28,11 +28,6 @@ public class ChatCanvas extends JPanel {
     }
 
 
-    public void setFlagStateFalse() {
-
-        tCanvas.setFlagStateFalse();
-    }
-
     public DataPack getDataPack() {
 
         return tCanvas.getDataPack();
@@ -64,7 +59,9 @@ public class ChatCanvas extends JPanel {
     }
 
     public void setMsgCanvas(MessagesCanvas msgCanvas) {
+
         this.msgCanvas = msgCanvas;
+        JScrollPane ScrollCanvas = new JScrollPane(this.msgCanvas);
 
         this.gbc.gridy = 0;
         this.gbc.anchor = GridBagConstraints.NORTH;
@@ -72,7 +69,7 @@ public class ChatCanvas extends JPanel {
         this.gbc.weighty = 10;
         this.gbc.weightx = 1;
 
-        this.add(msgCanvas,this.gbc);
+        this.add(ScrollCanvas,this.gbc);
     }
 
 }

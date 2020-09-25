@@ -16,6 +16,8 @@ public class TextCanvas extends JPanel{
 
         TextBox = new JTextArea();
 
+        TextBox.setLineWrap(true);
+
         JScrollPane ScrollBox = new JScrollPane(TextBox);
 
         this.add(ScrollBox, BorderLayout.CENTER);
@@ -24,12 +26,6 @@ public class TextCanvas extends JPanel{
     public void setMySocket(String mySocket) {
 
         MySocket = mySocket;
-
-    }
-
-    public void setFlagStateFalse() {
-
-        popupWindow.setFlagStateFalse();
 
     }
 

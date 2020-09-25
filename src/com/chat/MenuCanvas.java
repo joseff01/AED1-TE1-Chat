@@ -47,6 +47,8 @@ public class MenuCanvas extends JPanel {
 
         JList<String> ConvList = new JList<String>(listModel);
 
+        ConvList.setSelectionMode(DefaultListSelectionModel.SINGLE_SELECTION);
+
         JScrollPane listScrollPane = new JScrollPane(ConvList);
 
         gbCons.anchor = GridBagConstraints.SOUTH;
@@ -90,7 +92,7 @@ public class MenuCanvas extends JPanel {
         }
 
         else{
-            System.out.println("no biatches :(");
+            listModel.addElement("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket() );
         }
         /*
         for (int i = 0; i < listModel.size() ; i++ )

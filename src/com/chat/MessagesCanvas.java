@@ -13,15 +13,18 @@ public class MessagesCanvas extends JPanel implements Runnable{
 
     byte RowLevel = 0;
 
+    int YPosition = 0;
+
     public MessagesCanvas(){
 
         Thread ParallelThread = new Thread(this);
 
-        this.setLayout(new GridLayout());
+        this.setLayout(null);
 
         this.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
 
         ParallelThread.start();
+
 
     }
 
@@ -56,7 +59,7 @@ public class MessagesCanvas extends JPanel implements Runnable{
                 SenderSocket = dataPackReceived.getSenderSocket();
 
 
-                MessageBox = new JTextArea(3,10);
+                MessageBox = new JTextArea();
 
                 MessageBox.setEditable(false);
 
@@ -67,6 +70,11 @@ public class MessagesCanvas extends JPanel implements Runnable{
                 MessageBox.setText("Ip: " + SenderIP +  "/ Socket: " + SenderSocket + "\n" + Message);
 
                 JScrollPane jScrollPane = new JScrollPane(MessageBox);
+                jScrollPane.setBounds(0,YPosition,350,75);
+
+                YPosition = YPosition + 300;
+
+                getParent().validate();
 
                 this.add(jScrollPane);
 
