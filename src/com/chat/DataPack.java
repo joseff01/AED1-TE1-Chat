@@ -8,6 +8,7 @@ public class DataPack implements Serializable {
     private String Message;
     private String SenderSocket;
     private String ReceiverSocket;
+    private boolean SideFlag;
 
     public String getReceiverSocket() {
         return ReceiverSocket;
@@ -38,6 +39,14 @@ public class DataPack implements Serializable {
 
     public void setSenderSocket(String senderSocket) {
         SenderSocket = senderSocket;
+    }
+
+    public boolean isSideFlag() {
+        return SideFlag;
+    }
+
+    public void setSideFlag(boolean sideFlag) {
+        SideFlag = sideFlag;
     }
 
 

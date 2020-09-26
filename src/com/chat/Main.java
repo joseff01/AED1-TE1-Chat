@@ -45,6 +45,8 @@ public class Main {
 
         cCanvas.setMsgCanvas(MsgCanvas);
 
+        menuCanvas.setMessagesCanvas(MsgCanvas);
+
         //tCanvas in ChatCanvas
 
         TextCanvas tCanvas = new TextCanvas();
@@ -91,6 +93,8 @@ public class Main {
 
                             dataPack.setReceiverSocket(popupCanvas.getSocketText().getText());
 
+                            dataPack.setSideFlag(false);
+
                             ObjectOutputStream StreamOutput = new ObjectOutputStream(ClientSocket.getOutputStream());
 
                             StreamOutput.writeObject(dataPack);
@@ -100,6 +104,10 @@ public class Main {
                             JComponent component = (JComponent) i.getSource();
                             Window window = SwingUtilities.getWindowAncestor(component);
                             window.dispose();
+
+                            menuCanvas.checkPrevConvSender(dataPack);
+
+                            /*
 
                             menuCanvas.checkPrevConvSender(dataPack);
 
@@ -123,7 +131,7 @@ public class Main {
                             MsgCanvas.add(jScrollPane);
 
                             MsgCanvas.validate();
-                            MsgCanvas.repaint();
+                            MsgCanvas.repaint();  */
 
 
 

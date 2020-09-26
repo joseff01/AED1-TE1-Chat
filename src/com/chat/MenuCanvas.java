@@ -3,12 +3,15 @@ package com.chat;
 import javax.swing.*;
 
 import java.awt.*;
+import java.util.*;
 
 public class MenuCanvas extends JPanel {
 
     int ListenSocket;
 
     DefaultListModel listModel;
+
+    HashMap<String, Conversation> AllConversations = new HashMap<String, Conversation>();
 
     public MenuCanvas(){
 
@@ -88,13 +91,24 @@ public class MenuCanvas extends JPanel {
 
         if (listModel.contains("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket())){
 
-            System.out.println("No New Conversation");
+            Conversation conversation = AllConversations.get("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket());
+
+            conversation.addDataPack(dataPack);
+
+            messagesCanvas.displayConversation(conversation);
         }
 
-        else{
+        else {
 
             listModel.addElement("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket());
 
+            Conversation newConversation = new Conversation();
+
+            AllConversations.put("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket(), newConversation);
+
+            newConversation.addDataPack(dataPack);
+
+            messagesCanvas.displayConversation(newConversation);
         }
 
 
@@ -104,15 +118,39 @@ public class MenuCanvas extends JPanel {
 
         if (listModel.contains("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket())){
 
-            System.out.println("No New Conversation");
+            Conversation conversation = AllConversations.get("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket());
+
+            conversation.addDataPack(dataPack);
+
+            messagesCanvas.displayConversation(conversation);
         }
 
         else{
 
             listModel.addElement("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket());
 
+            Conversation newConversation = new Conversation();
+
+            AllConversations.put("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket(), newConversation);
+
+            newConversation.addDataPack(dataPack);
+
+            messagesCanvas.displayConversation(newConversation);
+
         }
 
 
     }
+
+
+    MessagesCanvas messagesCanvas = new MessagesCanvas();
+
+    public MessagesCanvas getMessagesCanvas() {
+        return messagesCanvas;
+    }
+
+    public void setMessagesCanvas(MessagesCanvas messagesCanvas) {
+        this.messagesCanvas = messagesCanvas;
+    }
+
 }

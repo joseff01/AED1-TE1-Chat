@@ -2,10 +2,12 @@ package com.chat;
 
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class MessagesCanvas extends JPanel implements Runnable{
 
@@ -56,33 +58,10 @@ public class MessagesCanvas extends JPanel implements Runnable{
 
                 dataPackReceived = (DataPack) StreamInput.readObject();
 
-                SenderIP = dataPackReceived.getSenderIP();
-                Message = dataPackReceived.getMessage();
-                SenderSocket = dataPackReceived.getSenderSocket();
+                dataPackReceived.setSideFlag(true);
 
                 menuCanvas.checkPrevConvReceiver(dataPackReceived);
 
-
-                MessageBox = new JTextArea();
-
-                MessageBox.setEditable(false);
-
-                MessageBox.setLineWrap(true);
-
-                MessageBox.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
-
-                MessageBox.setText("Ip: " + SenderIP +  "/ Socket: " + SenderSocket + "\n" + Message);
-
-                JScrollPane jScrollPane = new JScrollPane(MessageBox);
-                jScrollPane.setBounds(0,YPosition,350,75);
-
-                YPosition = YPosition + 75;
-
-                this.add(jScrollPane);
-
-                this.validate();
-                this.repaint();
-                
                 EntrySocket.close();
 
 
@@ -119,4 +98,56 @@ public class MessagesCanvas extends JPanel implements Runnable{
         this.menuCanvas = menuCanvas;
     }
 
+    public void displayConversation(Conversation conversation) {
+
+        this.removeAll();
+
+        ArrayList<DataPack> DataPackList = conversation.getDataPackList();
+
+        int YPosition = 0;
+
+        for (int i = 0; i < DataPackList.size(); i++){
+
+            DataPack dataPack = DataPackList.get(i);
+
+            MessageBox = new JTextArea();
+
+            MessageBox.setEditable(false);
+
+            MessageBox.setLineWrap(true);
+
+            MessageBox.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+
+            if (dataPack.isSideFlag()) {
+
+                MessageBox.setText("Ip: " + dataPack.getSenderIP() +  "/ Socket: " + dataPack.getSenderSocket() + "\n" + dataPack.getMessage());
+
+            } else {
+
+                MessageBox.setText("Ip: " + dataPack.getSenderIP() +  "/ Socket: " + dataPack.getReceiverSocket() + "\n" + dataPack.getMessage());
+
+            }
+
+            JScrollPane jScrollPane = new JScrollPane(MessageBox);
+
+            if (dataPack.isSideFlag()) {
+
+                jScrollPane.setBounds(0,YPosition,350,75);
+
+            } else {
+
+                jScrollPane.setBounds(65,YPosition,350,75);
+
+            }
+
+            YPosition = YPosition + 75;
+
+            this.add(jScrollPane);
+
+        }
+
+        this.validate();
+        this.repaint();
+
+    }
 }
