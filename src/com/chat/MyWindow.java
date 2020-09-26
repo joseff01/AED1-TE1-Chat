@@ -19,7 +19,7 @@ public class MyWindow extends JFrame{
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        this.setResizable(true);
+        this.setResizable(false);
 
         this.setMinimumSize(new Dimension(500,500));
 

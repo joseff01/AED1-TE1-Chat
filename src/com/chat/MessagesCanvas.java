@@ -15,6 +15,8 @@ public class MessagesCanvas extends JPanel implements Runnable{
 
     int YPosition = 0;
 
+
+
     public MessagesCanvas(){
 
         Thread ParallelThread = new Thread(this);
@@ -58,6 +60,8 @@ public class MessagesCanvas extends JPanel implements Runnable{
                 Message = dataPackReceived.getMessage();
                 SenderSocket = dataPackReceived.getSenderSocket();
 
+                menuCanvas.checkPrevConvReceiver(dataPackReceived);
+
 
                 MessageBox = new JTextArea();
 
@@ -72,15 +76,13 @@ public class MessagesCanvas extends JPanel implements Runnable{
                 JScrollPane jScrollPane = new JScrollPane(MessageBox);
                 jScrollPane.setBounds(0,YPosition,350,75);
 
-                YPosition = YPosition + 300;
-
-                getParent().validate();
+                YPosition = YPosition + 75;
 
                 this.add(jScrollPane);
 
                 this.validate();
                 this.repaint();
-
+                
                 EntrySocket.close();
 
 
@@ -106,5 +108,15 @@ public class MessagesCanvas extends JPanel implements Runnable{
     }
 
     private JTextArea MessageBox;
+
+    private MenuCanvas menuCanvas;
+
+    public MenuCanvas getMenuCanvas() {
+        return menuCanvas;
+    }
+
+    public void setMenuCanvas(MenuCanvas menuCanvas) {
+        this.menuCanvas = menuCanvas;
+    }
 
 }

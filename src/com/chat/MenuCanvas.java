@@ -84,23 +84,35 @@ public class MenuCanvas extends JPanel {
 
     private JMenuItem SocketItem;
 
-    public void checkPrevConv(DataPack dataPack) {
+    public void checkPrevConvReceiver(DataPack dataPack) {
 
-        if (listModel.contains("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket())){
+        if (listModel.contains("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket())){
 
-            System.out.println("hello biatches");
+            System.out.println("No New Conversation");
         }
 
         else{
-            listModel.addElement("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket() );
-        }
-        /*
-        for (int i = 0; i < listModel.size() ; i++ )
 
-            ( "Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket() )
+            listModel.addElement("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket());
+
         }
 
-         */
+
+    }
+
+    public void checkPrevConvSender(DataPack dataPack) {
+
+        if (listModel.contains("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket())){
+
+            System.out.println("No New Conversation");
+        }
+
+        else{
+
+            listModel.addElement("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket());
+
+        }
+
 
     }
 }

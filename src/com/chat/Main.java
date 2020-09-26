@@ -3,6 +3,7 @@ package com.chat;
 import org.w3c.dom.Text;
 
 import javax.swing.*;
+import javax.swing.border.EtchedBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,6 +40,8 @@ public class Main {
         //MessagesCanvas in ChatCanvas
 
         MessagesCanvas MsgCanvas = new MessagesCanvas();
+
+        MsgCanvas.setMenuCanvas(menuCanvas);
 
         cCanvas.setMsgCanvas(MsgCanvas);
 
@@ -98,7 +101,31 @@ public class Main {
                             Window window = SwingUtilities.getWindowAncestor(component);
                             window.dispose();
 
-                            menuCanvas.checkPrevConv(dataPack);
+                            menuCanvas.checkPrevConvSender(dataPack);
+
+                            JTextArea MessageBox = new JTextArea();
+
+                            MessageBox.setEditable(false);
+
+                            MessageBox.setLineWrap(true);
+
+                            MessageBox.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+
+                            MessageBox.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+
+                            MessageBox.setText("Ip: " + popupCanvas.getIPText().getText() +  "/ Socket: " + MsgCanvas.getListenSocket() + "\n" + popupCanvas.getTextMessage());
+
+                            JScrollPane jScrollPane = new JScrollPane(MessageBox);
+                            jScrollPane.setBounds(65,MsgCanvas.YPosition,350,75);
+
+                            MsgCanvas.YPosition = MsgCanvas.YPosition + 75;
+
+                            MsgCanvas.add(jScrollPane);
+
+                            MsgCanvas.validate();
+                            MsgCanvas.repaint();
+
+
 
 
                         } catch (IOException ioException) {
