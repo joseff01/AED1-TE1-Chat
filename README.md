@@ -2,11 +2,15 @@
 Estudiante: Jose Antonio Retana Corrales
 
 Instituto Tecnológico de Costa Rica
+
 CE1103: Algoritmos y Estructuras de Datos I
+
 Profesor: Isaac Ramirez
 
 Tarea Extraclase #1:
+
 Descripción de la tarea
+
 Se debe desarrollar una aplicación en Java que implemente un servicio sencillo de chat. La aplicación de
 chat se puede ejecutar varias veces en la misma computadora. Cuando se ejecuta, va a buscar un puerto
 que no esté ocupado. Al encontrarlo, crea un SocketServer para escuchar en ese puerto. Cuando hay varias
