@@ -2,8 +2,7 @@ package com.chat;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 
 public class TextCanvas extends JPanel{
@@ -11,6 +10,8 @@ public class TextCanvas extends JPanel{
     String MySocket;
 
     public TextCanvas(){
+
+        //Basic Config
 
         this.setLayout(new BorderLayout());
 
@@ -41,27 +42,10 @@ public class TextCanvas extends JPanel{
         return TextBox;
     }
 
-    public void setTextBox(JTextArea textBox) {
-        TextBox = textBox;
-
-    }
-
-
     private PopupWindow popupWindow;
-
-    public PopupWindow getPopupWindow() {
-        return popupWindow;
-    }
-
-    public void setPopupWindow(PopupWindow popupWindow) {
-        this.popupWindow = popupWindow;
-    }
 
     private JButton SendButton;
 
-    public JButton getSendButton() {
-        return SendButton;
-    }
 
     public void setSendButton(JButton sendButton) {
         SendButton = sendButton;

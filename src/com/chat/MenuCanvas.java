@@ -1,19 +1,26 @@
 package com.chat;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import java.awt.*;
 import java.util.*;
 
 public class MenuCanvas extends JPanel {
 
-    int ListenSocket;
+    private DefaultListModel listModel;
 
-    DefaultListModel listModel;
+    private JList<String> ConvList;
 
-    HashMap<String, Conversation> AllConversations = new HashMap<String, Conversation>();
+    //Hash map that connects the strings of the Jlist with the corresponding conversation
+    private HashMap<String, Conversation> AllConversations = new HashMap<String, Conversation>();
+
+    private JMenuItem SocketItem;
 
     public MenuCanvas(){
+
+        //Basic Config
 
         this.setLayout(new GridBagLayout());
 
@@ -29,7 +36,7 @@ public class MenuCanvas extends JPanel {
 
         SocketItem = new JMenuItem("Socket: ");
 
-        //InfoBar
+        //InfoBar with ip and socket
 
         IpInfo.add(IpItem);
         IpInfo.add(SocketItem);
@@ -44,11 +51,24 @@ public class MenuCanvas extends JPanel {
 
         this.add(InfoBar,gbCons);
 
-        //ConvList
+        //ConvList whit all conversations
 
         listModel = new DefaultListModel();
 
-        JList<String> ConvList = new JList<String>(listModel);
+        ConvList = new JList<String>(listModel);
+
+        ConvList.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+
+                String SelectedElement = ConvList.getSelectedValue();
+
+                Conversation conversation = AllConversations.get(SelectedElement);
+
+                messagesCanvas.displayConversation(conversation);
+
+            }
+        });
 
         ConvList.setSelectionMode(DefaultListSelectionModel.SINGLE_SELECTION);
 
@@ -66,53 +86,48 @@ public class MenuCanvas extends JPanel {
 
     }
 
-    public void setListenSocket(int listenSocket) {
 
-        ListenSocket = listenSocket;
-        SocketItem.setText("Socket: " + ListenSocket);
-
-    }
-
-    public void setConversation(MyConversation conversation){
-
-        listModel.addElement("Ip: " + conversation.ConvIp + "/ Socket: " + conversation.ConvSocket );
-
-    }
-
-    public DefaultListModel getConversationList(){
-
-        return listModel;
-
-    }
-
-    private JMenuItem SocketItem;
+    //Checks if the RECEIVED message comes from someone with an ongoing conversation,
+    // to see if it needs to create a new one
 
     public void checkPrevConvReceiver(DataPack dataPack) {
 
         if (listModel.contains("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket())){
 
-            Conversation conversation = AllConversations.get("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket());
+            if (Integer.parseInt(dataPack.getSenderSocket()) != ListenSocket) {
 
-            conversation.addDataPack(dataPack);
+                Conversation conversation = AllConversations.get("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket());
 
-            messagesCanvas.displayConversation(conversation);
+                conversation.addDataPack(dataPack);
+
+                messagesCanvas.displayConversation(conversation);
+            }
+
         }
 
         else {
 
-            listModel.addElement("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket());
+            if (Integer.parseInt(dataPack.getSenderSocket()) != ListenSocket) {
 
-            Conversation newConversation = new Conversation();
+                listModel.addElement("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket());
 
-            AllConversations.put("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket(), newConversation);
+                Conversation newConversation = new Conversation();
 
-            newConversation.addDataPack(dataPack);
+                AllConversations.put("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket(), newConversation);
 
-            messagesCanvas.displayConversation(newConversation);
+                newConversation.addDataPack(dataPack);
+
+                messagesCanvas.displayConversation(newConversation);
+
+            }
         }
 
 
     }
+
+
+    //Checks if the SENT message comes from someone with an ongoing conversation,
+    // to see if it needs to create a new one
 
     public void checkPrevConvSender(DataPack dataPack) {
 
@@ -151,6 +166,15 @@ public class MenuCanvas extends JPanel {
 
     public void setMessagesCanvas(MessagesCanvas messagesCanvas) {
         this.messagesCanvas = messagesCanvas;
+    }
+
+    int ListenSocket;
+
+    public void setListenSocket(int listenSocket) {
+
+        ListenSocket = listenSocket;
+        SocketItem.setText("Socket: " + ListenSocket);
+
     }
 
 }

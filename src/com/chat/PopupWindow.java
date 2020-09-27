@@ -31,16 +31,6 @@ public class PopupWindow extends JFrame{
 
     }
 
-    public void setMySocket(String mySocket) {
-
-        popupCanvas.setMySocket(mySocket);
-
-    }
-
-    public PopupCanvas getPopupCanvas() {
-        return popupCanvas;
-    }
-
     public void setPopupCanvas(PopupCanvas popupCanvas) {
 
         this.popupCanvas = popupCanvas;

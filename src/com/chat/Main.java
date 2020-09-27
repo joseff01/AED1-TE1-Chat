@@ -1,9 +1,6 @@
 package com.chat;
 
-import org.w3c.dom.Text;
-
 import javax.swing.*;
-import javax.swing.border.EtchedBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,6 +11,8 @@ import java.net.Socket;
 public class Main {
 
     public static void main(String[] args) {
+
+        // Main Window creation
 
         MyWindow mainWindow = new MyWindow();
 
@@ -70,6 +69,8 @@ public class Main {
 
                 popupWindow.setText(tCanvas.getTextBox().getText());
 
+                // Send Button in the popup window
+
                 JButton PopupSendButton = new JButton("Send");
                 PopupSendButton.setBounds(80,60,90,40);
                 popupCanvas.add(PopupSendButton);
@@ -106,34 +107,6 @@ public class Main {
                             window.dispose();
 
                             menuCanvas.checkPrevConvSender(dataPack);
-
-                            /*
-
-                            menuCanvas.checkPrevConvSender(dataPack);
-
-                            JTextArea MessageBox = new JTextArea();
-
-                            MessageBox.setEditable(false);
-
-                            MessageBox.setLineWrap(true);
-
-                            MessageBox.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-
-                            MessageBox.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
-
-                            MessageBox.setText("Ip: " + popupCanvas.getIPText().getText() +  "/ Socket: " + MsgCanvas.getListenSocket() + "\n" + popupCanvas.getTextMessage());
-
-                            JScrollPane jScrollPane = new JScrollPane(MessageBox);
-                            jScrollPane.setBounds(65,MsgCanvas.YPosition,350,75);
-
-                            MsgCanvas.YPosition = MsgCanvas.YPosition + 75;
-
-                            MsgCanvas.add(jScrollPane);
-
-                            MsgCanvas.validate();
-                            MsgCanvas.repaint();  */
-
-
 
 
                         } catch (IOException ioException) {

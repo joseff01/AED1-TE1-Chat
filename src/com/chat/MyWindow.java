@@ -2,13 +2,12 @@ package com.chat;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.net.*;
 
 public class MyWindow extends JFrame{
 
     public MyWindow(){
+
+        // Default window values
 
         this.setSize(850,720);
         this.setLocation(50,50);
