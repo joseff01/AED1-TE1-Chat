@@ -125,7 +125,7 @@ public class MessagesCanvas extends JPanel implements Runnable{
 
             } else {
 
-                MessageBox.setText("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getReceiverSocket() + "\n" + dataPack.getMessage());
+                MessageBox.setText("Ip: " + dataPack.getSenderIP() + "/ Socket: " + dataPack.getSenderSocket() + "\n" + dataPack.getMessage());
                 jScrollPane.setBounds(65, YPosition, 350, 75);
 
             }
