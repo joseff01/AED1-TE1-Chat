@@ -51,7 +51,7 @@ public class MenuCanvas extends JPanel {
 
         this.add(InfoBar,gbCons);
 
-        //ConvList whit all conversations
+        //ConvList with all conversations
 
         listModel = new DefaultListModel();
 

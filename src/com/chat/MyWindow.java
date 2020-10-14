@@ -11,7 +11,7 @@ public class MyWindow extends JFrame{
 
         this.setSize(850,720);
         this.setLocation(50,50);
-        this.setTitle("Chat V0.1");
+        this.setTitle("Chat V1.0");
 
         ImageIcon chatIcon = new ImageIcon("Images\\chatIcon.jpg");
         this.setIconImage(chatIcon.getImage());
