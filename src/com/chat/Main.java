@@ -1,5 +1,8 @@
 package com.chat;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,9 +11,15 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+
+
 public class Main {
+    private static Logger log = LoggerFactory.getLogger(Main.class);
+
+
 
     public static void main(String[] args) {
+        log.debug("hi");
 
         // Main Window creation
 
@@ -111,6 +120,8 @@ public class Main {
 
                         } catch (IOException ioException) {
 
+
+                            log.error("oh oh");
                             System.out.println(ioException.getMessage());
 
                             JComponent component = (JComponent) i.getSource();

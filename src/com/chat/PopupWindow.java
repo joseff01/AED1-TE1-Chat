@@ -39,13 +39,7 @@ public class PopupWindow extends JFrame{
     }
 
     public PopupCanvas popupCanvas;
-/*
-    public boolean getFlagState(){
 
-        return popupCanvas.getConvListFlag;
-
-    }
-*/
 
 
     public DataPack getDataPack() {

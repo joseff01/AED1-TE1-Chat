@@ -28,17 +28,8 @@ public class ChatCanvas extends JPanel {
     }
 
 
-    public DataPack getDataPack() {
-
-        return tCanvas.getDataPack();
-
-    }
-
     private TextCanvas tCanvas;
 
-    public TextCanvas gettCanvas() {
-        return tCanvas;
-    }
 
     public void settCanvas(TextCanvas tCanvas) {
         this.tCanvas = tCanvas;
@@ -53,10 +44,6 @@ public class ChatCanvas extends JPanel {
     }
 
     private MessagesCanvas msgCanvas;
-
-    public MessagesCanvas getMsgCanvas() {
-        return msgCanvas;
-    }
 
     public void setMsgCanvas(MessagesCanvas msgCanvas) {
 

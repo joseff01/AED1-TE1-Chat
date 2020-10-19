@@ -24,16 +24,8 @@ public class MyCanvas extends JPanel {
 
     private ChatCanvas cCanvas;
 
-    public MenuCanvas getMenuCanvas() {
-        return menuCanvas;
-    }
-
     public void setMenuCanvas(MenuCanvas menuCanvas) {
         this.menuCanvas = menuCanvas;
-    }
-
-    public ChatCanvas getcCanvas() {
-        return cCanvas;
     }
 
     public void setcCanvas(ChatCanvas cCanvas) {

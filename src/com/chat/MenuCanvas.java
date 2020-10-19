@@ -160,9 +160,6 @@ public class MenuCanvas extends JPanel {
 
     MessagesCanvas messagesCanvas = new MessagesCanvas();
 
-    public MessagesCanvas getMessagesCanvas() {
-        return messagesCanvas;
-    }
 
     public void setMessagesCanvas(MessagesCanvas messagesCanvas) {
         this.messagesCanvas = messagesCanvas;

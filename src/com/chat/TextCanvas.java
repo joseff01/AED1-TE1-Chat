@@ -30,11 +30,7 @@ public class TextCanvas extends JPanel{
 
     }
 
-    public DataPack getDataPack() {
 
-        return popupWindow.getDataPack();
-
-    }
 
     private JTextArea TextBox;
 
@@ -42,7 +38,6 @@ public class TextCanvas extends JPanel{
         return TextBox;
     }
 
-    private PopupWindow popupWindow;
 
     private JButton SendButton;
 

@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -25,16 +26,25 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mariana\Documents\SEMESTRE 2\Algoritmos y Estructura de datos\AED1-TE1-Chat\src" />
+      <recent name="C:\Users\Mariana\Documents\SEMESTRE 2\Algoritmos y Estructura de datos\AED1-TE1-Chat\lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mariana\Documents\SEMESTRE 2\Algoritmos y Estructura de datos\AED1-TE1-Chat\src\com\chat" />
       <recent name="C:\Users\josea\OneDrive\Documents\GitHub\AED1-TE1-Chat\lib" />
     </key>
   </component>
@@ -48,15 +58,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,34 +112,52 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1726" y="410" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1601149908024" />
-    <state x="1704" y="598" width="431" height="215" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602617376841">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="599" y="123" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1603091564479">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="599" y="123" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1536.824@0.0.1536.824" timestamp="1603091564479" />
+    <state x="1022" y="352" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603092147720">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="1022" y="352" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1603092147720" />
     <state x="1704" y="598" width="431" height="215" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400@0.0.2560.1400" timestamp="1602617376841" />
     <state x="1651" y="450" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601013803648">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1651" y="450" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1601013803648" />
-    <state x="1701" y="456" key="FileChooserDialogImpl" timestamp="1600548004813">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1603089121604">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603089121604" />
+    <state x="946" y="268" key="FileChooserDialogImpl" timestamp="1603089109712">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="946" y="268" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603089109712" />
     <state x="1701" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1600548004813" />
-    <state width="1400" height="220" key="GridCell.Tab.0.bottom" timestamp="1602617511947">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1603092641234">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603092641234" />
     <state width="1400" height="220" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1602617511947" />
-    <state width="1400" height="220" key="GridCell.Tab.0.center" timestamp="1602617511947">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1603092641234">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603092641234" />
     <state width="1400" height="220" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1602617511947" />
-    <state width="1400" height="220" key="GridCell.Tab.0.left" timestamp="1602617511947">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1603092641234">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603092641234" />
     <state width="1400" height="220" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1602617511947" />
-    <state width="1400" height="220" key="GridCell.Tab.0.right" timestamp="1602617511947">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1603092641234">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603092641234" />
     <state width="1400" height="220" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1602617511947" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1603091667275">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603091667275" />
     <state x="1577" y="333" key="run.anything.popup" timestamp="1600642042177">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
