@@ -89,7 +89,7 @@ public class Main {
 
                         try {
 
-                            if (popupCanvas.getIPText().getText() != "127.0.0.1"){
+                            if (! popupCanvas.getIPText().getText().equals("127.0.0.1")){
 
                                 log.error("The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)");
                                 return;

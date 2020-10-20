@@ -1,31 +1,13 @@
-<<<<<<< Updated upstream
-
-2020-10-19 23:20:20,375 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
-2020-10-19 23:24:36,569 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
-java.lang.NumberFormatException: For input string: "hola"
+2020-10-20 17:26:46,589 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:27:54,564 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:28:53,901 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:31:53,204 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:33:38,382 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
+java.lang.NumberFormatException: For input string: "dsadasdas"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
 	at java.base/java.lang.Integer.parseInt(Integer.java:652)
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-=======
-2020-10-19 01:16:18,517 DEBUG com.chat.Main [main] hi
-2020-10-19 01:16:45,802 DEBUG com.chat.Main [main] hi
-2020-10-19 01:18:15,760 DEBUG com.chat.Main [main] hi
-2020-10-19 01:18:15,762 ERROR com.chat.Main [main] hi
-2020-10-19 21:53:33,932 DEBUG com.chat.Main [main] hi
-2020-10-19 21:58:06,106 DEBUG com.chat.Main [main] hi
-2020-10-20 12:43:24,256 ERROR com.chat.Main [AWT-EventQueue-0] Se ingresó un socket inexistente
-java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:503)
-	at java.base/sun.nio.ch.Net.connect(Net.java:492)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
-	at java.base/java.net.Socket.connect(Socket.java:648)
-	at java.base/java.net.Socket.connect(Socket.java:597)
-	at java.base/java.net.Socket.<init>(Socket.java:520)
-	at java.base/java.net.Socket.<init>(Socket.java:294)
->>>>>>> Stashed changes
-	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:94)
+	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:101)
 	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
 	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
@@ -61,131 +43,15 @@ java.net.ConnectException: Connection refused: connect
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-<<<<<<< Updated upstream
-2020-10-19 23:24:47,253 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
-java.lang.NumberFormatException: For input string: "hola"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
-	at java.base/java.lang.Integer.parseInt(Integer.java:652)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-=======
-2020-10-20 12:46:04,436 ERROR com.chat.Main [AWT-EventQueue-0] Se ingresó un socket inexistente
-java.net.ConnectException: Connection timed out: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:503)
-	at java.base/sun.nio.ch.Net.connect(Net.java:492)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
-	at java.base/java.net.Socket.connect(Socket.java:648)
-	at java.base/java.net.Socket.connect(Socket.java:597)
-	at java.base/java.net.Socket.<init>(Socket.java:520)
-	at java.base/java.net.Socket.<init>(Socket.java:294)
->>>>>>> Stashed changes
-	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:94)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6636)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6401)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5012)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4919)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4548)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4489)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2764)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-<<<<<<< Updated upstream
-2020-10-19 23:24:50,813 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
-java.lang.NumberFormatException: For input string: "hola"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
-	at java.base/java.lang.Integer.parseInt(Integer.java:652)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-=======
-2020-10-20 12:46:26,815 ERROR com.chat.Main [AWT-EventQueue-0] Se ingresó un socket inexistente
-java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:503)
-	at java.base/sun.nio.ch.Net.connect(Net.java:492)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
-	at java.base/java.net.Socket.connect(Socket.java:648)
-	at java.base/java.net.Socket.connect(Socket.java:597)
-	at java.base/java.net.Socket.<init>(Socket.java:520)
-	at java.base/java.net.Socket.<init>(Socket.java:294)
->>>>>>> Stashed changes
-	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:94)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6636)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6401)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5012)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4919)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4548)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4489)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2764)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-<<<<<<< Updated upstream
-2020-10-19 23:26:17,807 ERROR com.chat.Main [AWT-EventQueue-0] Entered socket number must be lower than 10000
-=======
->>>>>>> Stashed changes
-2020-10-20 14:43:02,784 INFO com.chat.Main [main] hola
-2020-10-20 14:50:26,887 INFO com.chat.Main [main] hola
-2020-10-20 14:51:23,676 ERROR com.chat.Main [AWT-EventQueue-0] Se ingreso un socket invalido
-java.net.UnknownHostException: fdsafdsafdsa
+2020-10-20 17:33:55,509 ERROR com.chat.Main [AWT-EventQueue-0] Se ingreso un socket invalido
+java.net.UnknownHostException: r415415413
 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
 	at java.base/java.net.Socket.connect(Socket.java:648)
 	at java.base/java.net.Socket.connect(Socket.java:597)
 	at java.base/java.net.Socket.<init>(Socket.java:520)
 	at java.base/java.net.Socket.<init>(Socket.java:294)
-	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:119)
+	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:118)
 	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
 	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
@@ -221,47 +87,19 @@ java.net.UnknownHostException: fdsafdsafdsa
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-2020-10-20 14:51:35,250 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
-java.lang.NumberFormatException: For input string: "hola como esta"
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
-	at java.base/java.lang.Integer.parseInt(Integer.java:652)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
-	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:102)
-	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
-	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
-	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
-	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
-	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
-	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6636)
-	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
-	at java.desktop/java.awt.Component.processEvent(Component.java:6401)
-	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
-	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5012)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
-	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4919)
-	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4548)
-	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4489)
-	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
-	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2764)
-	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
-	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-2020-10-20 14:54:04,935 INFO com.chat.Main [main] hola
-2020-10-20 14:55:14,699 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
-2020-10-20 15:00:50,757 INFO com.chat.Main [main] hola
+2020-10-20 17:35:46,284 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:36:51,836 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:36:58,258 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:37:07,242 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:37:10,482 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:37:37,355 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:37:43,427 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:37:48,674 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:37:49,146 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:37:52,506 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:39:54,452 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:40:09,098 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:41:45,668 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:41:50,058 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:41:51,594 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 17:42:32,804 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
