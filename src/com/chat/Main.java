@@ -14,9 +14,8 @@ import java.net.Socket;
 
 
 public class Main {
+
     private static Logger log = LoggerFactory.getLogger(Main.class);
-
-
 
     public static void main(String[] args) {
         log.debug("hi");
