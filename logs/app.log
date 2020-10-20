@@ -264,3 +264,4 @@ java.lang.NumberFormatException: For input string: "hola como esta"
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
 2020-10-20 14:54:04,935 INFO com.chat.Main [main] hola
 2020-10-20 14:55:14,699 ERROR com.chat.Main [AWT-EventQueue-0] The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)
+2020-10-20 15:00:50,757 INFO com.chat.Main [main] hola
