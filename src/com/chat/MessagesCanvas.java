@@ -27,7 +27,6 @@ public class MessagesCanvas extends JPanel implements Runnable{
 
         ParallelThread.start();
 
-
     }
 
     public int getListenSocket(){
@@ -43,7 +42,6 @@ public class MessagesCanvas extends JPanel implements Runnable{
     public void run() {
 
         try {
-
             //Sets the socket that will receive the messages
             ServerSocket ListenSocket = new ServerSocket(ListenSocketNum);
 
@@ -79,6 +77,7 @@ public class MessagesCanvas extends JPanel implements Runnable{
                 run();
 
             }
+
             else{
                 //if it doesn't find a valid socket, it prints an error
                 log.error("Se exedio el numero de socket disponibles");

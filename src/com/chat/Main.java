@@ -19,6 +19,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        log.info("hola");
+
         // Main Window creation
 
         MyWindow mainWindow = new MyWindow();
@@ -92,7 +94,7 @@ public class Main {
                             if (popupCanvas.getIPText().getText() == "127.0.0.1"){
 
                                 log.error("The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)");
-
+                                return;
                             }
 
                             try{
@@ -109,7 +111,7 @@ public class Main {
 
                             if (Integer.parseInt(popupCanvas.getSocketText().getText()) < 10000) {
 
-                                log.error("Entered socket number must be lower than 10000");
+                                log.error("Entered socket number must be higher than 10000");
                                 return;
 
                             }
