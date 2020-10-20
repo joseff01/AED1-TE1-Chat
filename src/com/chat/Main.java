@@ -18,7 +18,6 @@ public class Main {
     private static Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
-        log.debug("hi");
 
         // Main Window creation
 
@@ -89,6 +88,31 @@ public class Main {
                     public void actionPerformed(ActionEvent i) {
 
                         try {
+
+                            if (popupCanvas.getIPText().getText() == "127.0.0.1"){
+
+                                log.error("The IP number must be 127.0.0.1 (Beta Version only works with multiple instances on the same computer)");
+
+                            }
+
+                            try{
+
+                                Integer.parseInt(popupCanvas.getSocketText().getText());
+
+                            } catch (NumberFormatException numberFormatException) {
+
+                                log.error("The entered socket number must be an Integer",numberFormatException);
+                                return;
+
+                            }
+
+
+                            if (Integer.parseInt(popupCanvas.getSocketText().getText()) < 10000) {
+
+                                log.error("Entered socket number must be lower than 10000");
+                                return;
+
+                            }
 
                             Socket ClientSocket = new Socket(popupCanvas.getIPText().getText(), Integer.parseInt(popupCanvas.getSocketText().getText()));
 
