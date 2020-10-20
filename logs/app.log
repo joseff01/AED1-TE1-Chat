@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 2020-10-19 23:20:20,375 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
 2020-10-19 23:24:36,569 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
@@ -5,6 +6,25 @@ java.lang.NumberFormatException: For input string: "hola"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
 	at java.base/java.lang.Integer.parseInt(Integer.java:652)
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+=======
+2020-10-19 01:16:18,517 DEBUG com.chat.Main [main] hi
+2020-10-19 01:16:45,802 DEBUG com.chat.Main [main] hi
+2020-10-19 01:18:15,760 DEBUG com.chat.Main [main] hi
+2020-10-19 01:18:15,762 ERROR com.chat.Main [main] hi
+2020-10-19 21:53:33,932 DEBUG com.chat.Main [main] hi
+2020-10-19 21:58:06,106 DEBUG com.chat.Main [main] hi
+2020-10-20 12:43:24,256 ERROR com.chat.Main [AWT-EventQueue-0] Se ingresó un socket inexistente
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:503)
+	at java.base/sun.nio.ch.Net.connect(Net.java:492)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/java.net.Socket.connect(Socket.java:597)
+	at java.base/java.net.Socket.<init>(Socket.java:520)
+	at java.base/java.net.Socket.<init>(Socket.java:294)
+>>>>>>> Stashed changes
 	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:94)
 	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
 	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
@@ -41,11 +61,25 @@ java.lang.NumberFormatException: For input string: "hola"
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+<<<<<<< Updated upstream
 2020-10-19 23:24:47,253 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
 java.lang.NumberFormatException: For input string: "hola"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
 	at java.base/java.lang.Integer.parseInt(Integer.java:652)
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+=======
+2020-10-20 12:46:04,436 ERROR com.chat.Main [AWT-EventQueue-0] Se ingresó un socket inexistente
+java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:503)
+	at java.base/sun.nio.ch.Net.connect(Net.java:492)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/java.net.Socket.connect(Socket.java:597)
+	at java.base/java.net.Socket.<init>(Socket.java:520)
+	at java.base/java.net.Socket.<init>(Socket.java:294)
+>>>>>>> Stashed changes
 	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:94)
 	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
 	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
@@ -82,11 +116,25 @@ java.lang.NumberFormatException: For input string: "hola"
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+<<<<<<< Updated upstream
 2020-10-19 23:24:50,813 ERROR com.chat.Main [AWT-EventQueue-0] The entered socket number must be an Integer
 java.lang.NumberFormatException: For input string: "hola"
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
 	at java.base/java.lang.Integer.parseInt(Integer.java:652)
 	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+=======
+2020-10-20 12:46:26,815 ERROR com.chat.Main [AWT-EventQueue-0] Se ingresó un socket inexistente
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:503)
+	at java.base/sun.nio.ch.Net.connect(Net.java:492)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:648)
+	at java.base/java.net.Socket.connect(Socket.java:597)
+	at java.base/java.net.Socket.<init>(Socket.java:520)
+	at java.base/java.net.Socket.<init>(Socket.java:294)
+>>>>>>> Stashed changes
 	at com.chat.Main$1CreatePopup$1SendTextEvent.actionPerformed(Main.java:94)
 	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
 	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
@@ -123,4 +171,7 @@ java.lang.NumberFormatException: For input string: "hola"
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+<<<<<<< Updated upstream
 2020-10-19 23:26:17,807 ERROR com.chat.Main [AWT-EventQueue-0] Entered socket number must be lower than 10000
+=======
+>>>>>>> Stashed changes

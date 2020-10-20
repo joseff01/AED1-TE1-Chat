@@ -15,7 +15,7 @@ import java.net.Socket;
 
 public class Main {
 
-    private static Logger log = LoggerFactory.getLogger(Main.class);
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
 
@@ -144,8 +144,8 @@ public class Main {
                         } catch (IOException ioException) {
 
 
-                            log.error("oh oh");
-                            System.out.println(ioException.getMessage());
+                            log.error("Se ingreso un socket invalido",ioException);
+
 
                             JComponent component = (JComponent) i.getSource();
                             Window window = SwingUtilities.getWindowAncestor(component);

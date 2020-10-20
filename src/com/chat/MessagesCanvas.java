@@ -1,5 +1,8 @@
 package com.chat;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import java.io.IOException;
@@ -9,6 +12,7 @@ import java.util.ArrayList;
 
 public class MessagesCanvas extends JPanel implements Runnable{
 
+    private final Logger log = LoggerFactory.getLogger(Main.class);
     int ListenSocketNum = 10000;
 
     public MessagesCanvas(){
@@ -68,6 +72,7 @@ public class MessagesCanvas extends JPanel implements Runnable{
         } catch (IOException | ClassNotFoundException e) {
 
             if (ListenSocketNum < 20000){
+                //log.warn("ListenSocket invalido... intentando axceder a uno mayor");
 
                 //if the set socket is invalid, it will try for a different value.
                 ListenSocketNum++;
@@ -76,7 +81,7 @@ public class MessagesCanvas extends JPanel implements Runnable{
             }
             else{
                 //if it doesn't find a valid socket, it prints an error
-                e.printStackTrace();
+                log.error("Se exedio el numero de socket disponibles");
 
             }
 
